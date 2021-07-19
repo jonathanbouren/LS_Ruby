@@ -1,4 +1,3 @@
+number = '1'
 
-  number = '1'
-
-  Kernel.puts(number).to_i().inspect()
+Kernel.puts(number).to_i().inspect()
