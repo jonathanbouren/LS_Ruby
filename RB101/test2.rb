@@ -1,14 +1,18 @@
-  # this is a test file for attempting refactoring without breaking the program
-  # Still getting an error message for nil:NilClass (NoMethodError)
-  # Check if changing the when-then fixes the warnings in rubocop
 
   require 'pry'
   require 'yaml'
   require 'erb'
   name = 'name'
 
+
   MESSAGES = YAML.load_file('calculator_messages.yml')
   LANGUAGE = { '1' => 'en', '2' => 'ru' }
+
+  # at top of file after initializing MESSAGES
+
+  def messages(message, lang_choice='en')
+    MESSAGES[lang_choice][message]
+  end
 
 
   def prompt(message)
@@ -57,11 +61,11 @@
 
   prompt(MESSAGES[LANGUAGE]['welcome'])
 
-  name = ''
+
   loop do
     name = Kernel.gets().chomp()
     if name.empty?() || number?(name)
-      prompt(format(MESSAGES[LANGUAGE]['valid_name']))
+      prompt('valid_name')
 
     else
       break
@@ -103,7 +107,7 @@
         if %w(1 2 3 4).include?(operator)
           break
         else
-          prompt(MESSAGES[LANGUAGE]['choose_operator'])
+          prompt(MESSAGES[LANGUAGES]['choose_operator'])
         end
       end
       if number2 == '0' && operator == '4'
@@ -126,12 +130,12 @@
                number1.to_f() / number2.to_f()
              end
 
-    prompt(format(MESSAGES[LANGUAGE]['result'], op_result: result))
+    puts " #{prompt('result')} #{result}"
 
-    prompt(MESSAGES[LANGUAGE]['another_calculation'])
+    prompt('another_calculation')
     answer = Kernel.gets().chomp()
 
     break unless answer.downcase().start_with?('y')
   end
 
-  prompt(MESSAGES[LANGUAGE]['thanks_bye'])
+  prompt('thanks_bye')

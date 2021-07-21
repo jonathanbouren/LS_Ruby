@@ -1,3 +1,5 @@
+# this is a test file for attempting refactoring without breaking the program
+# Still getting an error message for nil:NilClass (NoMethodError)
 
   require 'pry'
   require 'yaml'
@@ -7,11 +9,6 @@
   MESSAGES = YAML.load_file('calculator_messages.yml')
   LANGUAGE = { '1' => 'en', '2' => 'ru' }
 
-  # at top of file after initializing MESSAGES
-
-  def messages(message, lang_choice='en')
-    MESSAGES[lang_choice][message]
-  end
 
   def prompt(message)
     Kernel.puts("=> #{message}")
@@ -26,10 +23,6 @@
       break if %w(1 2).include?(lang_choice)
     end
   LANGUAGE[lang_choice]
-  end
-  def prompt(key)
-  message = messages(key, LANGUAGE)
-  Kernel.puts("=> #{message}")
   end
 
   def number?(num)
@@ -61,21 +54,20 @@
   number2 = ' '
   LANGUAGE = language_preference
 
-  prompt('welcome')
+  prompt(MESSAGES[LANGUAGE]['welcome'])
 
   name = ''
   loop do
     name = Kernel.gets().chomp()
     if name.empty?() || number?(name)
-      prompt('valid_name')
+      prompt(format(MESSAGES[LANGUAGE]['valid_name']))
 
     else
       break
     end
   end
 
-  prompt('greeting')
-
+  prompt(format(MESSAGES[LANGUAGE]['greeting'], user_name: name))
 
   loop do
     loop do

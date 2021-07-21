@@ -8,7 +8,7 @@
   en:
     welcome: "Welcome to Calculator! Please enter your name:"
 
-    greeting: "Hi , %{user_name}!"
+    greeting: "Hi %{user_name} !"
 
     valid_name: "Make sure you enter a valid name!"
 
@@ -28,7 +28,7 @@
 
     zero_division: "Unable to perform division by 0, try again please."
 
-    result: "The result is %{op_result}."
+    result: "The result is %{op_result}"
 
     another_calculation: "Do you want to perform another calculation? (Y to calculate again:)"
 
@@ -37,7 +37,7 @@
   ru:
     welcome: "Добро пожаловать в Калькулятор! Пожалуйста, введите свое имя:"
 
-    greeting: "Привет , %{user_name}"
+    greeting: "Привет %{user_name}!"
 
     valid_name: "Убедитесь, что вы ввели действительное имя!"
 
@@ -57,7 +57,7 @@
 
     zero_division: "Не удалось выполнить деление на 0, повторите попытку, пожалуйста."
 
-    result: "Результат >> %{op_result}."
+    result: "Результат >> %{op_result} "
 
     another_calculation: "Вы хотите выполнить еще один расчет? ('Y' для повторного вычисления:)"
 
