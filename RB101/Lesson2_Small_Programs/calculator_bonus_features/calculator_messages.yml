@@ -1,7 +1,7 @@
 
   # copy prompt message from here >> prompt(MESSAGES['welcome'])
   language_menu: "What is your preferred language:\n
-  выберите свой язык:\n
+                               выберите свой язык:\n
   '1' for English\n
   '2' for Русский\n"
 
