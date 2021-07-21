@@ -1,0 +1,64 @@
+
+  # copy prompt message from here >> prompt(MESSAGES['welcome'])
+  language_menu: "What is your preferred language:\n
+  выберите свой язык:\n
+  '1' for English\n
+  '2' for Русский\n"
+
+  en:
+    welcome: "Welcome to Calculator! Please enter your name:"
+
+    greeting: "Hi , %{user_name}!"
+
+    valid_name: "Make sure you enter a valid name!"
+
+    first_number: "Whats the first number?"
+
+    number_not_valid: "Hmmm... that doesn't look like a valid number."
+
+    second_number: "Whats the second number?"
+
+    operator_message: "What operation would you like to perform?\n
+    1) add\n
+    2) subtract\n
+    3) multiply\n
+    4) divide"
+
+    choose_operator: "Must choose 1, 2, 3 or 4"
+
+    zero_division: "Unable to perform division by 0, try again please."
+
+    result: "The result is %{op_result}."
+
+    another_calculation: "Do you want to perform another calculation? (Y to calculate again:)"
+
+    thanks_bye: "Thank you for using the calculator. Goodbye!"
+
+  ru:
+    welcome: "Добро пожаловать в Калькулятор! Пожалуйста, введите свое имя:"
+
+    greeting: "Привет , %{user_name}"
+
+    valid_name: "Убедитесь, что вы ввели действительное имя!"
+
+    first_number: "Какой первый номер?"
+
+    number_not_valid: "Хммм... это не похоже на действительный номер."
+
+    second_number: "Какой второй номер?"
+
+    operator_message: "Какую математическую операцию вы хотите выполнить?\n
+    1) добавление\n
+    2) вычитание\n
+    3) умножение\n
+    4) деление"
+
+    choose_operator: "Необходимо выбрать 1, 2, 3 или 4"
+
+    zero_division: "Не удалось выполнить деление на 0, повторите попытку, пожалуйста."
+
+    result: "Результат >> %{op_result}."
+
+    another_calculation: "Вы хотите выполнить еще один расчет? ('Y' для повторного вычисления:)"
+
+    thanks_bye: "Спасибо, что воспользовались калькулятором. До свидания!"
