@@ -9,7 +9,6 @@
   MESSAGES = YAML.load_file('calculator_messages.yml')
   LANGUAGE = { '1' => 'en', '2' => 'ru' }
 
-
   def prompt(message)
     Kernel.puts("=> #{message}")
   end
@@ -22,7 +21,7 @@
       lang_choice = Kernel.gets().chomp()
       break if %w(1 2).include?(lang_choice)
     end
-  LANGUAGE[lang_choice]
+    LANGUAGE[lang_choice]
   end
 
   def number?(num)
