@@ -1,3 +1,4 @@
+
 # this is a test file for attempting refactoring without breaking the program
 # Still getting an error message for nil:NilClass (NoMethodError)
 
@@ -128,9 +129,9 @@ loop do
   answer = ' '
   loop do
     prompt(MESSAGES[LANGUAGE]['another_calculation'])
-    answer = Kernel.gets().chomp()
-    break if answer.include?("n")
-    break if answer.include?("y")
+    answer = Kernel.gets().chomp().downcase()
+    break if answer == 'n'
+    break if answer == 'y'
     prompt(MESSAGES[LANGUAGE]["invalid_exit"])
   end
 

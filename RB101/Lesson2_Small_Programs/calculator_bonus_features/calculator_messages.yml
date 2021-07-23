@@ -30,9 +30,11 @@
 
     result: "The result is %{op_result}"
 
-    another_calculation: "Do you want to perform another calculation? (Y to calculate again:)"
+    another_calculation: "Do you want to perform another calculation? (Y for yes or N for no)"
 
     thanks_bye: "Thank you for using the calculator. Goodbye!"
+
+    invalid_exit: "Invalid response, please enter Y or N "
 
   ru:
     welcome: "Добро пожаловать в Калькулятор! Пожалуйста, введите свое имя:"
@@ -59,6 +61,8 @@
 
     result: "Результат >> %{op_result} "
 
-    another_calculation: "Вы хотите выполнить еще один расчет? ('Y' для повторного вычисления:)"
+    another_calculation: "Вы хотите выполнить еще один расчет? (Y >> Да N >> Нет)"
 
     thanks_bye: "Спасибо, что воспользовались калькулятором. До свидания!"
+
+    invalid_exit: "Неверный ответ, введите Y или N."
