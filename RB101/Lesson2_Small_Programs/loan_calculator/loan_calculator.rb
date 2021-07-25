@@ -104,11 +104,11 @@ def interest_conversion
   interest
 end
 
-def break?(_ans)
+def break?(ans)
   @check_again == 2
 end
 
-def no_break?(_ans)
+def no_break?(ans)
   @check_again == 1
 end
 
