@@ -1,0 +1,23 @@
+loan_length: "Please enter the length of the loan. (If whole years, enter 0 for months.)"
+
+time_error_years: "Error: please enter a valid number for years."
+
+time_error_months: "Error: please enter a valid number for months."
+
+loan_amount: "Please enter the amount of the loan:"
+
+num_error: "Error! Please enter a valid number:"
+
+interest_msg: "Please enter the interest rate (example 5, 5.5, 10.1)"
+
+interest_error: "Error!\n Invalid input: Enter a valid interest rate (example 5, 5.5, 0.3)"
+
+another_loan: "Would you like to check another loan? Yes or No?"
+
+yes: ["y","yes","yeah","yep","ok","sure","probably"]
+
+exit_error: "Hmmm, I didn't quite get that, try again."
+
+result_message: "Thank you for using the loan calculator!\n
+  Your loan of %{loan_amount} for %{loan_time}
+  months will cost approximately $%{payment} each month."
