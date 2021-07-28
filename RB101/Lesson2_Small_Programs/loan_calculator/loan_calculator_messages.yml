@@ -1,3 +1,5 @@
+welcome: "Welcome to the loan calculator! Let's get started. "
+
 loan_length: "Please enter the length of the loan. (If whole years, enter 0 for months.)"
 
 time_error_years: "Error: please enter a valid number for years."
