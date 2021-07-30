@@ -58,7 +58,7 @@ SCORE = {
 def play_again
   answer = ' '
   loop do
-    prompt('Do you want to play again?')
+    prompt('Do you want to play again? y if yes, n if no')
     answer = Kernel.gets().chomp()
     if Y_N.include?(answer.downcase())
       break
