@@ -152,28 +152,40 @@ def another_calculation?
   answer
 end
 
+def calculate()
+  loan_tot = loan_amount()
+  total_months = loan_length()
+  int = interest_conversion()
+  case payment
+  when int == 0
+    loan_tot / total_months
+  else
+   loan_tot * (int / (1 - (1 + int)**(-total_months)))
+  end
+end
+
+
 system("clear")
 prompt(MESSAGES['welcome'])
 sleep(2)
 
 loop do # outer loop
   system("clear")
-  loan_tot = loan_amount()
-  total_months = loan_length()
-  int = interest_conversion()
+  calculate()
+=begin
   if int == 0
     payment = loan_tot / total_months
   else
     payment = loan_tot * (int / (1 - (1 + int)**(-total_months)))
   end
+=end
+
   system("clear")
   prompt(format(MESSAGES['result_message'], loan_amount: loan_tot,
                                             loan_time: total_months,
                                             payment: payment.round(2)))
 
   check_again = another_calculation?()
-  puts check_again
-  sleep(5)
   case check_again
   when 2
     wave_left()

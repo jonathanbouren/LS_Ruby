@@ -20,7 +20,7 @@ def language_preference
   lang_choice = ' '
   loop do
     lang_choice = Kernel.gets().chomp()
-    next if %w(1 2).include?(lang_choice)
+    break if %w(1 2).include?(lang_choice)
   end
   LANG_CHOICES[lang_choice]
 end
@@ -62,13 +62,11 @@ operator = ' '
 loop do
   prompt(MESSAGES[LANGUAGE]['operator_message'])
   operator = Kernel.gets().chomp()
-  if %w(1 2 3 4).include?(operator)
-    break
-  else
+  break if %w(1 2 3 4).include?(operator)
     prompt(MESSAGES[LANGUAGE]['choose_operator'])
   end
   end
-end
+
 
 def get_name()
   name = ''
@@ -125,8 +123,8 @@ prompt(format(MESSAGES[LANGUAGE]['greeting'], user_name: name))
 loop do
   loop do
   number1 = get_number_one()
-    number2 = get_number_two()
-    operator = get_operator()
+  number2 = get_number_two()
+  operator = get_operator()
 
     if number2 == '0' && operator == '4'
       prompt(MESSAGES[LANGUAGE]['zero_division'])
@@ -134,11 +132,11 @@ loop do
       break
     end
   end
-end
+
 
   prompt("#{operation_to_message(operator)} the numbers...")
-
-  result = case operator
+  @result = ' '
+  @result = case operator
            when "1"
              number1.to_f() + number2.to_f()
            when "2"
@@ -149,7 +147,7 @@ end
              number1.to_f() / number2.to_f()
            end
 
-  prompt(format(MESSAGES[LANGUAGE]['result'], op_result: result))
+  prompt(format(MESSAGES[LANGUAGE]['result'], op_result: @result))
   answer = ' '
   loop do
     prompt(MESSAGES[LANGUAGE]['another_calculation'])
@@ -158,6 +156,7 @@ end
     break if answer == 'y'
     prompt(MESSAGES[LANGUAGE]["invalid_exit"])
   end
+end
 
 
 # prompt(MESSAGES[LANGUAGE]["invalid_exit"])
